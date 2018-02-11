@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        //leap year
         /*int year;
         boolean isLeap;
         System.out.println("Введіть рік");
@@ -16,7 +17,8 @@ public class Main {
 
         System.out.println("Year is leap - " + isLeap);*/
 
-        int number;
+        //asterisk pyramid
+        /*int number;
         System.out.println("Введіть непарне число");
         Scanner sc = new Scanner(System.in);
         number = sc.nextInt();
@@ -27,6 +29,21 @@ public class Main {
             System.out.println("");
             num--;
             i+=2;
+        }*/
+
+        //sum of the series 1+11+111+1111 + .. n terms.
+        int num;
+        System.out.println("Input the number of terms ");
+        Scanner sc = new Scanner(System.in);
+        num = sc.nextInt();
+        int sum = 0;
+        String one = "1";
+        for (int i = 0; i < num; i++){
+            int j = Integer.parseInt(one);
+            sum += j;
+            one = one + 1;
         }
+
+        System.out.println("The sum is: " + sum);
     }
 }
