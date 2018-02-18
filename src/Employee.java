@@ -27,9 +27,7 @@ public class Employee {
         return "Emlpoyee [Name = " + name + ", rate = " + rate + ", hours = " + hours + "]";
     }
 
-    public void setRate(int rate) {
-        this.rate = rate;
-    }
+    public void changeRate(int rate) {this.rate = rate;}
 
     public static int getTotalHours() {
         return totalHours;
