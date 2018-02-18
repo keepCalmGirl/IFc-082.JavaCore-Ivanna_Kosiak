@@ -1,12 +1,18 @@
+import Task1.Continents;
+import Task2.Departments;
+import Task2.Employee;
+
+import java.util.Arrays;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        String country;
-        System.out.println("Введіть країну");
+        //по введеній країні визначити континент
+        System.out.println("Please, enter country");
         Scanner sc = new Scanner(System.in);
-        country = sc.next();
+        String country = sc.next();
         Continents continent = Continents.NEVERLAND; //знаю що так не можна але по іншому не компілюється
         switch (country){
             case "Ukraine" : case "Poland" : case "Germany" : case "Great Britan" :
@@ -26,5 +32,55 @@ public class Main {
         }
 
         System.out.println(country + " is in " + continent);
+
+        //операції над масивом цілих чисел
+        int arr[] = {-8,5,69,-9,87,9,20,-87,46,13};
+        int max = arr[0];
+        int sumPositive = 0;
+        int amountNeg = 0;
+        int amountPos = 0;
+
+        for (int i = 0; i < 10; i++){
+            if (max < arr[i]) max = arr[i];
+            if (arr[i] > 0){
+                sumPositive += arr[i];
+                amountPos++;
+            } else
+                amountNeg++;
+        }
+
+        System.out.println("\nThe biggest of numbers:\t" + max + "\nSum of positive numbers in array:\t" + sumPositive + "\nAmount of negative numbers in array:\t" + amountNeg + "\nAmount of positive numbers in array:\t" + amountPos);
+
+        if (amountNeg > amountPos)
+            System.out.println("Negative values are more");
+        else if (amountNeg < amountPos)
+            System.out.println("Positive values are more");
+        else
+            System.out.println("Amount of positive and negative value is equal");
+
+        //вибірка, сортування і enum
+        Employee employees[] = new Employee[5];
+        employees[0] = new Employee("John Watson", Departments.CUSTOMER_SERVICE, 2500 );
+        employees[1] = new Employee("Max Demian", Departments.IT, 3000);
+        employees[2] = new Employee("Lee Dong Wook", Departments.RESEARCH_AND_DEVELOPMENT, 3200);
+        employees[3] = new Employee("Natsume Takada", Departments.TECHNICAL_SUPPORT, 3500);
+        employees[4] = new Employee("Janusz Novak", Departments.LOGISTICS, 2700);
+
+        //з консолі імені департаменту і виведення працівників даного департаменту
+        System.out.println("\nPlease, enter department in upper case");
+        String dep = sc.next();
+         for (int i = 0; i < 5; i++){
+             if (employees[i].getDepartment().equals(dep)) {
+                 System.out.println(employees[i].toString());
+             }
+
+         }
+
+
+
+
+
+
+
     }
 }

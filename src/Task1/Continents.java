@@ -1,3 +1,5 @@
+package Task1;
+
 public enum  Continents {
     ASIA, AFRICA, NORTH_AMERICA, SOUTH_AMERICA, EUROPE, AUSTRALIA_AND_OCEANIA, NEVERLAND
 }
