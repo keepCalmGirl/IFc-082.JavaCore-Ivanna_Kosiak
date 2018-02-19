@@ -10,12 +10,12 @@ public class Main {
 
     public static void main(String[] args) {
         //по введеній країні визначити континент
-       // System.out.println("Please, enter country");
+       System.out.println("Please, enter country");
         Scanner sc = new Scanner(System.in);
-        /*String country = sc.next();
+        String country = sc.next();
         Continents continent = Continents.NEVERLAND; //знаю що так не можна але по іншому не компілюється
         switch (country){
-            case "Ukraine" : case "Poland" : case "Germany" : case "Great Britan" :
+            case "Ukraine" : case "Poland" : case "Germany" : case "Great Brittan" :
                 continent = Continents.EUROPE; break;
             case "Peru" : case "Brasilia" : case "Argentina" :
                 continent = Continents.SOUTH_AMERICA; break;
@@ -56,7 +56,7 @@ public class Main {
         else if (amountNeg < amountPos)
             System.out.println("Positive values are more");
         else
-            System.out.println("Amount of positive and negative value is equal");*/
+            System.out.println("Amount of positive and negative value is equal");
 
         //вибірка, сортування і enum
         Employee employees[] = new Employee[5];
@@ -67,14 +67,14 @@ public class Main {
         employees[4] = new Employee("Janusz Novak", Departments.LOGISTICS, 2700);
 
         //з консолі імені департаменту і виведення працівників даного департаменту
-        /*System.out.println("\nPlease, enter department in upper case");
+        System.out.println("\nPlease, enter department in upper case");
         String dep = sc.next();
          for (int i = 0; i < 5; i++){
              if (employees[i].getDepartment().equals(dep)) {
                  System.out.println(employees[i].toString());
              }
 
-         }*/
+         }
 
          //сортування по зарплатті бульбашкою за зростанням
         System.out.println("\nAscending bubble sort by field salary");
