@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -6,7 +8,11 @@ public class Main {
 	String str2 = "Max Demian";
         System.out.println(str2.contains(str1));
 
-        System.out.println(makeAllFirstLetterUpper("Come here and help yourself"));
+        // changing the first letter of each word in the string to upper case
+        System.out.println("Please, enter a sentence");
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.next();
+        System.out.println(makeAllFirstLetterUpper(str));
 
     }
     public static String makeAllFirstLetterUpper(String str) {
