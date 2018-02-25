@@ -14,16 +14,21 @@ public class Main {
         String str = scanner.nextLine();
         System.out.println(PracticalTask.makeAllFirstLetterUpper(str));
 
-        //Enter in the console sentence of five words.
-        //display the longest word in the sentence
-        //determine the number of its letters
-        //bring the second word in reverse order
+        /*Enter in the console sentence of five words.
+        - display the longest word in the sentence
+        - determine the number of its letters
+        - bring the second word in reverse order*/
         System.out.println("Please, enter sentence of five words");
         String fiveWordsStr = scanner.nextLine();
         String theLongestWord = PracticalTask.getTheLongestWord(fiveWordsStr);
-        System.out.println("The longest word is - " + theLongestWord + "\nthe number of its letters: " + theLongestWord.length());
-        System.out.println("Second word in reverse - " + PracticalTask.getSecondWordInReverse(fiveWordsStr));
+        System.out.println("The longest word is - " + theLongestWord + "\nThe number of its letters is - " + theLongestWord.length());
+        System.out.println("Second word in reverse is - " + PracticalTask.getSecondWordInReverse(fiveWordsStr));
 
+        //Enter a sentence that contains the words between more than
+        //one space. Convert all spaces, consecutive, one.
+        System.out.println("\nPlease, enter a sentence that contains the words between more than one space");
+        String string = scanner.nextLine();
+        PracticalTask.deleteSpacesBetweenWords(string);
 
     }
 

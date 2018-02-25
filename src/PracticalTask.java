@@ -31,4 +31,8 @@ public class PracticalTask {
         return stringBuilder.reverse().toString();
 
     }
+
+    public static void deleteSpacesBetweenWords(String str){
+        System.out.println(str.trim().replaceAll("\\s{2,}", " "));
+    }
 }
